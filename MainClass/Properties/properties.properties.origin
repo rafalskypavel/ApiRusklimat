@@ -1,0 +1,8 @@
+[Auth]
+login =
+password =
+partnerId =
+[Logging]
+filename=Output\\Result\\log_rusklimat.log
+[Path]
+path_for_json_response_files=Output\\Transitional files\\
