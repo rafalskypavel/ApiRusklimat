@@ -1,3 +1,18 @@
 /myenv/
 /.idea/
 /MainClass/Properties/properties.properties
+
+# Игнорировать все файлы логов
+*.log
+
+# Игнорировать CSV-файлы
+*.csv
+
+# Игнорировать JSON-файлы
+*.json
+
+# Игнорировать содержимое папки Output/Result, но не саму папку
+MainClass/Output/Result/*
+
+# Игнорировать содержимое папки Output/Transitional files, но не саму папку
+MainClass/Output/Transitional files/*
