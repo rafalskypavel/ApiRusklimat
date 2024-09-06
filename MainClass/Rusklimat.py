@@ -166,33 +166,33 @@ class Api_rusklimat:
 
 if __name__ == "__main__":
     try:
-        # Api_class = Api_rusklimat()
-        #
-        # # Получение категорий и их сохранение
-        # categories = Api_class.get_categories()
-        # if categories:
-        #     Api_class.save_to_json(categories, "categories.json")
-        #
-        # # Получение характеристик и их сохранение
-        # properties = Api_class.get_properties()
-        # if properties:
-        #     Api_class.save_to_json(properties, "properties.json")
-        #
-        # # Получение товаров и их сохранение
-        # products = Api_class.get_products()
-        # if products:
-        #     Api_class.save_to_json(products, "products.json")
+        Api_class = Api_rusklimat()
+
+        # Получение категорий и их сохранение
+        categories = Api_class.get_categories()
+        if categories:
+            Api_class.save_to_json(categories, "categories.json")
+
+        # Получение характеристик и их сохранение
+        properties = Api_class.get_properties()
+        if properties:
+            Api_class.save_to_json(properties, "properties.json")
+
+        # Получение товаров и их сохранение
+        products = Api_class.get_products()
+        if products:
+            Api_class.save_to_json(products, "products.json")
 
         # # Объединение данных и конвертация в CSV
         path = "Output\\Transitional files\\"
         result = "Output\\Result\\"
-        # products_file = path + "products.json"
-        # properties_file = path + "properties.json"
-        # categories_file = path + "categories.json"
-        # output_file = path + "output_merged.json"
-        #
-        # product_merger = ProductMerger(products_file, properties_file, categories_file, output_file)
-        # product_merger.merge_properties_and_categories_into_products()
+        products_file = path + "products.json"
+        properties_file = path + "properties.json"
+        categories_file = path + "categories.json"
+        output_file = path + "output_merged.json"
+
+        product_merger = ProductMerger(products_file, properties_file, categories_file, output_file)
+        product_merger.merge_properties_and_categories_into_products()
 
         # Конвертация в CSV
         json_file_path = path + "output_merged.json"
